@@ -1,0 +1,10 @@
+{
+  "name": "cas-call-trainer",
+  "version": "1.0.0",
+  "description": "Browser-based training aid for JTACs: CAS 9-line, readbacks, radio procedure and brevity codes.",
+  "private": true,
+  "scripts": {
+    "test": "node tests/run.js",
+    "start": "python -m http.server 8000"
+  }
+}

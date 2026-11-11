@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CAS Call Trainer — JTAC 9-Line &amp; Brevity Practice</title>
+  <meta name="description" content="Practice close air support (CAS) check-ins, 9-lines, readbacks, radio procedure and brevity codes. Quizzes, flashcards, graded 9-line drills and a radio simulator.">
+  <meta name="color-scheme" content="dark light">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230b100d'/%3E%3Ccircle cx='16' cy='16' r='8' fill='none' stroke='%23f0b429' stroke-width='2'/%3E%3Cpath d='M16 3v7M16 22v7M3 16h7M22 16h7' stroke='%23f0b429' stroke-width='2'/%3E%3C/svg%3E">
+  <script>
+    // Apply the saved theme before first paint to avoid a flash.
+    try {
+      var t = JSON.parse(localStorage.getItem('cas.theme'));
+      if (t === 'light' || t === 'dark') document.documentElement.setAttribute('data-theme', t);
+    } catch (e) {}
+  </script>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#view">Skip to content</a>
+
+  <header class="topbar">
+    <a class="brand" href="#/" aria-label="CAS Call Trainer home">
+      <svg class="brand-mark" viewBox="0 0 32 32" width="28" height="28" aria-hidden="true">
+        <circle cx="16" cy="16" r="9" fill="none" stroke="currentColor" stroke-width="2"/>
+        <circle cx="16" cy="16" r="2" fill="currentColor"/>
+        <path d="M16 2v8M16 22v8M2 16h8M22 16h8" stroke="currentColor" stroke-width="2"/>
+      </svg>
+      <span class="brand-text"><b>CAS</b> CALL TRAINER</span>
+    </a>
+    <nav id="nav" class="nav" aria-label="Primary">
+      <a href="#/study" data-route="study">Study</a>
+      <a href="#/brevity" data-route="brevity">Brevity</a>
+      <a href="#/quiz" data-route="quiz">Quiz</a>
+      <a href="#/drill" data-route="drill">9-Line Drill</a>
+      <a href="#/sim" data-route="sim">Radio Sim</a>
+      <a href="#/reference" data-route="reference">Reference</a>
+    </nav>
+    <button id="theme-toggle" class="icon-btn" type="button" aria-label="Switch to light theme" title="Toggle light / dark theme">
+      <span aria-hidden="true">◐</span>
+    </button>
+  </header>
+
+  <main id="view" tabindex="-1" aria-live="polite">
+    <noscript><p class="page">This trainer needs JavaScript enabled.</p></noscript>
+  </main>
+
+  <footer class="footer">
+    <p><strong>Training aid, not doctrine.</strong> Content is drawn from publicly available joint publications (JP 3-09.3, ATP 3-09.32, multi-service brevity codes). Scenarios, grids and units are fictional. Always follow your current publications, theater SPINS and unit SOPs.</p>
+  </footer>
+
+  <script src="js/util.js"></script>
+  <script src="js/data/brevity.js"></script>
+  <script src="js/data/nineline.js"></script>
+  <script src="js/data/scenarios.js"></script>
+  <script src="js/data/sim.js"></script>
+  <script src="js/grader.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/views/home.js"></script>
+  <script src="js/views/study.js"></script>
+  <script src="js/views/brevity.js"></script>
+  <script src="js/views/quiz.js"></script>
+  <script src="js/views/drill.js"></script>
+  <script src="js/views/sim.js"></script>
+  <script src="js/views/reference.js"></script>
+  <script>CAS.start();</script>
+</body>
+</html>
